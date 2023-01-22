@@ -39,6 +39,8 @@ language_extensions = {
     "scss": "scss",
     # 'snippets': 'snippets',
     "sql": "sql",
+    "swift": "swift",
+    "playground": "playground",
     "talon": "talon",
     "terraform": "tf",
     "typescript": "ts",

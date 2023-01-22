@@ -32,6 +32,7 @@ _file_extensions_defaults = {
     "tot csv": ".csv",
     "dot cassie": ".csv",
     "dot text": ".txt",
+    "dot swift": ".swift",
 }
 
 file_extensions = get_list_from_csv(
