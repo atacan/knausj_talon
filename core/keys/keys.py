@@ -4,6 +4,7 @@ default_alphabet = "air bat cap drum each fine gust harp sit jury crunch look ma
     " "
 )
 letters_string = "abcdefghijklmnopqrstuvwxyz"
+amazement_alphabet = {'birch': 'e', 'orange': 'o', 'oink': 'o', 'risk': 'r', 'wet': 'w', 'whip': 'w', 'york': 'y'}
 
 default_digits = "zero one two three four five six seven eight nine".split(" ")
 numbers = [str(i) for i in range(10)]
@@ -119,7 +120,7 @@ if app.platform == "mac":
     modifier_keys["command"] = "cmd"
     modifier_keys["option"] = "alt"
 ctx.lists["self.modifier_key"] = modifier_keys
-alphabet = dict(zip(default_alphabet, letters_string))
+alphabet = dict(zip(default_alphabet, letters_string)) | amazement_alphabet
 ctx.lists["self.letter"] = alphabet
 
 # `punctuation_words` is for words you want available BOTH in dictation and as key names in command mode.
@@ -137,7 +138,7 @@ punctuation_words = {
     "period": ".",
     "full stop": ".",
     "semicolon": ";",
-    "colon": ":",
+    # "colon": ":",
     "forward slash": "/",
     "question mark": "?",
     "exclamation mark": "!",
@@ -159,6 +160,7 @@ symbol_key_words = {
     "quote": "'",
     "question": "?",
     "apostrophe": "'",
+    "single": "'",
     "L square": "[",
     "left square": "[",
     "square": "[",
@@ -174,6 +176,7 @@ symbol_key_words = {
     "bang": "!",
     "down score": "_",
     "underscore": "_",
+    "score": "_",
     "paren": "(",
     "L paren": "(",
     "left paren": "(",
@@ -184,11 +187,13 @@ symbol_key_words = {
     "brack": "{",
     "bracket": "{",
     "left bracket": "{",
+    "lacer": "{",
     "r brace": "}",
     "right brace": "}",
     "r brack": "}",
     "r bracket": "}",
     "right bracket": "}",
+    "racer": "}",
     "angle": "<",
     "left angle": "<",
     "less than": "<",
@@ -204,9 +209,12 @@ symbol_key_words = {
     "pipe": "|",
     "dub quote": '"',
     "double quote": '"',
+    "double": '"',
+    "stack": ":",
     # Currencies
     "dollar": "$",
     "pound": "£",
+    "euro": "€",
 }
 
 # make punctuation words also included in {user.symbol_keys}
