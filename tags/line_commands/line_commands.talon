@@ -69,5 +69,5 @@ clone (line | that): edit.line_clone()
 
 select camel left: user.extend_camel_left()
 select camel right: user.extend_camel_right()
-go camel left: user.camel_left()
-go camel right: user.camel_right()
+[go] camel left: user.camel_left()
+[go] camel right: user.camel_right()
