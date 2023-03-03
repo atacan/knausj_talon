@@ -194,17 +194,17 @@ class CodeActions:
 @ctx.action_class("edit")
 class EditActions:
     # talon edit actions
-    def copy():
-        actions.user.idea("action EditorCopy")
+    # def copy():
+    #     actions.user.idea("action EditorCopy")
 
-    def cut():
-        actions.user.idea("action EditorCut")
+    # def cut():
+    #     actions.user.idea("action EditorCut")
 
-    def delete():
-        actions.user.idea("action EditorBackSpace")
+    # def delete():
+    #     actions.user.idea("action EditorBackSpace")
 
-    def paste():
-        actions.user.idea("action EditorPaste")
+    # def paste():
+    #     actions.user.idea("action EditorPaste")
 
     def find_next():
         actions.user.idea("action FindNext")
