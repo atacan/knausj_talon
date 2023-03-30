@@ -40,7 +40,7 @@ language_extensions = {
     # 'snippets': 'snippets',
     "sql": "sql",
     "swift": "swift",
-    "swift": "playground",
+    # "swift": "playground",
     "talon": "talon",
     "terraform": "tf",
     "typescript": "ts",
