@@ -2,6 +2,7 @@ import contextlib
 import time
 
 from talon import Context, actions, ctrl, ui
+from talon.mac import applescript
 
 ctx = Context()
 ctx.matches = r"""
@@ -27,25 +28,46 @@ def _drag_window_mac(win=None):
 @ctx.action_class("user")
 class MacActions:
     def desktop(number: int):
-        if number < 10:
-            actions.key(f"ctrl-{number}")
+        applescript.run(
+            """
+            tell application "BetterTouchTool" to trigger_action "{\\"BTTPredefinedActionType\\": 211}"
+            """
+        )
 
     def desktop_next():
-        actions.key("ctrl-right")
+        applescript.run(
+            """
+        tell application "BetterTouchTool" to trigger_action "{\\"BTTPredefinedActionType\\": 114}"
+        """
+        )
 
     def desktop_last():
-        actions.key("ctrl-left")
+        applescript.run(
+            """
+            tell application "BetterTouchTool" to trigger_action "{\\"BTTPredefinedActionType\\": 113}"
+            """
+        )
 
     def desktop_show():
-        actions.key("ctrl-up")
+        applescript.run(
+            """
+            tell application "BetterTouchTool" to trigger_action "{\\"BTTPredefinedActionType\\": 165}"
+            """
+        )
 
     def window_move_desktop_left():
-        with _drag_window_mac():
-            actions.key("ctrl-cmd-alt-left")
+        applescript.run(
+            """
+                tell application "BetterTouchTool" to trigger_action "{\\"BTTPredefinedActionType\\": 151}"
+            """
+        )
 
     def window_move_desktop_right():
-        with _drag_window_mac():
-            actions.key("ctrl-cmd-alt-right")
+        applescript.run(
+            """
+                tell application "BetterTouchTool" to trigger_action "{\\"BTTPredefinedActionType\\": 152}"
+            """
+        )
 
     def window_move_desktop(desktop_number: int):
         if ui.apps(bundle="com.amethyst.Amethyst"):
