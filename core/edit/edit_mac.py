@@ -18,10 +18,8 @@ class EditActions:
         actions.key("backspace")
 
     def delete_line():
-        actions.edit.select_line()
-        actions.edit.delete()
-        # action(edit.delete_paragraph):
-        # action(edit.delete_sentence):
+        actions.user.delete_all_right()
+        actions.user.delete_all_left()
 
     def delete_word():
         actions.edit.select_word()
