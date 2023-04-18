@@ -28,10 +28,13 @@ def _drag_window_mac(win=None):
 @ctx.action_class("user")
 class MacActions:
     def desktop(number: int):
+        if number > 9:  # 9 is the last desktop BTT has
+            return
+        action_number = 206 + number
         applescript.run(
             """
             tell application "BetterTouchTool" to trigger_action "{\\"BTTPredefinedActionType\\": 211}"
-            """
+            """.replace("211", str(action_number))
         )
 
     def desktop_next():
@@ -70,8 +73,19 @@ class MacActions:
         )
 
     def window_move_desktop(desktop_number: int):
-        if ui.apps(bundle="com.amethyst.Amethyst"):
-            actions.key(f"ctrl-alt-shift-{desktop_number}")
-        else:
-            with _drag_window_mac():
-                actions.key(f"ctrl-{desktop_number}")
+        if desktop_number > 9:  # 9 is the last desktop BTT has
+            return
+        actions = {1: 216,
+                   2: 217,
+                   3: 218,
+                   4: 219,
+                   5: 220,
+                   6: 222,
+                   7: 223,
+                   8: 224,
+                   9: 225, }
+        applescript.run(
+            """
+            tell application "BetterTouchTool" to trigger_action "{\\"BTTPredefinedActionType\\": 211}"
+            """.replace("211", str(actions[desktop_number]))
+        )
