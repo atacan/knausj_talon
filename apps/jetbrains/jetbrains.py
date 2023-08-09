@@ -236,8 +236,8 @@ class EditActions:
     def select_word():
         actions.user.idea("action EditorSelectWord")
 
-    def select_all():
-        actions.user.idea("action $SelectAll")
+    # def select_all():
+    #     actions.user.idea("action $SelectAll")
 
     def file_start():
         actions.user.idea("action EditorTextStart")
