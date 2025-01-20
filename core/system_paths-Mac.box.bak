@@ -1,0 +1,16 @@
+list: user.system_paths
+hostname: Mac.box
+-
+user: /Users/atacan
+desktop: /Users/atacan/Desktop
+desk: /Users/atacan/Desktop
+documents: /Users/atacan/Documents
+docks: /Users/atacan/Documents
+downloads: /Users/atacan/Downloads
+music: /Users/atacan/Music
+pictures: /Users/atacan/Pictures
+videos: /Users/atacan/Videos
+talon home: /Users/atacan/.talon
+talon recordings: /Users/atacan/.talon/recordings
+talon user: /Users/atacan/.talon/user
+home: /Users/atacan
