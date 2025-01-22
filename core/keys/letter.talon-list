@@ -6,7 +6,6 @@ batch: b
 bill: b
 bat: b
 cap: c
-crunch: c
 drum: d
 birch: e
 each: e
@@ -21,6 +20,7 @@ sit: i
 jail: j
 jane: j
 judge: j
+crunch: k
 jury: j
 little: l
 look: l
